@@ -24,8 +24,7 @@ Pod::Spec.new do |s|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = <<-DESC
-                   DESC
+  s.description  = "hello, this is a framework test!"
 
   s.homepage     = "https://github.com/jiazhh0325/ThreeRingControl"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -38,8 +37,8 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = "MIT"
+   #s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -80,7 +79,7 @@ Pod::Spec.new do |s|
   #
 
   #s.source       = { :git => "http://EXAMPLE/ThreeRingControl.git", :tag => "#{s.version}" }
-  s.source       = { :path => '.' }
+  s.source        = { :git => "https://github.com/jiazhh0325/ThreeRingControl", :tag => "1.0.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,9 +90,9 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m,swift}"
-  s.exclude_files = "Classes/Exclude"
-
+  s.source_files  = "ThreeRingControl", "ThreeRingControl/**/*.{h,m,swift}"
+  s.exclude_files = "ThreeRingControl/*.mp3"
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3' }
   # s.public_header_files = "Classes/**/*.h"
 
 
